@@ -902,6 +902,40 @@ html{
   }
 }
 
+.footer {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 168 212 / var(--tw-bg-opacity));
+}
+
+.footer__drop {
+  margin-bottom: 3rem;
+}
+
+.footer__drop__item h4 {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.footer__drop__item h4 i.open {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.footer__drop__item ul {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-height: 0px;
+  overflow: hidden;
+  transition-property: .5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }

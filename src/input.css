@@ -102,3 +102,26 @@
  }
 
 }
+
+@layer components{
+
+  .footer{
+    @apply bg-pink-300
+  }
+  .footer__drop{
+    @apply mb-[3rem]
+  }
+.footer__drop__item h4{
+@apply flex justify-between font-semibold 
+}
+.footer__drop__item h4 i.open{
+  @apply rotate-[180deg] ease-in transition-[.5s]
+}
+.footer__drop__item ul{
+  @apply mb-[2rem]
+}
+.footer__drop__item ul{
+  @apply my-[2rem] max-h-0 overflow-hidden transition-[.5s]
+}
+
+}
