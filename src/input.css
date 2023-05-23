@@ -106,22 +106,94 @@
 @layer components{
 
   .footer{
-    @apply bg-pink-300
+    @apply bg-light border-t-2
+  }
+  .footer__wrapper{
+    @apply lg:flex lg:flex-row-reverse lg:justify-evenly
   }
   .footer__drop{
-    @apply mb-[3rem]
+    @apply mb-[3rem] lg:grid lg:grid-cols-6 lg:ml-[2rem]
   }
 .footer__drop__item h4{
-@apply flex justify-between font-semibold 
+@apply flex justify-between font-semibold ml-[1rem]  text-dark lg:block lg:pointer-events-none
+}
+.footer__drop__item i{
+  @apply lg:hidden
 }
 .footer__drop__item h4 i.open{
-  @apply rotate-[180deg] ease-in transition-[.5s]
+  @apply rotate-[180deg] ease-in transition-[.5s] lg:block
 }
 .footer__drop__item ul{
-  @apply mb-[2rem]
+  @apply mb-[1rem] lg:ml-[-4rem] lg:text-[1.3rem]
 }
 .footer__drop__item ul{
-  @apply my-[2rem] max-h-0 overflow-hidden transition-[.5s]
+  @apply my-[2rem] max-h-0 overflow-hidden transition-[.5s] lg:overflow-visible lg:mr-[2rem]
+}
+.footer__drop__item ul.open {
+  @apply max-h-[15rem] transition-[.5s] overflow-hidden lg:block
+}
+.footer__drop__item ul li {
+  @apply hover:scale-[1.05] transition-all mx-[2rem] text-dark lg:ml-[5rem]
+}
+.footer__social ul li a{
+  @apply text-light mx-[.3rem] lg:ml-[.3rem]
+}
+.footer__social ul  li{
+  @apply  text-[1.4rem]  bg-primary rounded-full w-[2.1rem] h-[rem]
+}
+.footer__social ul{
+@apply flex gap-[2rem] justify-center 
+}
+.lobe__image{
+  @apply  flex justify-center pt-[4rem] lg:mr-[6rem]
+}
+.lobe__text p{
+  @apply flex justify-center my-[1rem] lg:text-justify lg:justify-start ml-[2rem]
+}
+.lobe{
+  @apply lg:mt-[-3.8rem] lg:ml-[20rem] lg:text-[1.3rem]  text-dark cursor-default
+}
 }
 
+
+
+
+
+
+
+@layer components{
+  .faq .container{
+      @apply max-w-[70rem];
+  }
+  .faq__wrapper{
+      @apply lg:grid  lg:grid-cols-[1.5fr,2.5fr] items-start;
+  }
+  .faq__tabs{
+      @apply hidden lg:block;
+  }
+  .faq__question{
+      @apply py-[2rem] border-b-[1px];
+  }
+ 
+  .faq__question h4{
+      @apply flex items-center justify-between;
+  }
+  .faq__question h4 i{
+      @apply transition ease-in-out duration-[.5s];
+  }
+  .faq__question h4 i.open{
+      @apply transform rotate-[180deg];
+  }
+  .faq__tab__content__answer{
+      @apply max-h-[0rem] overflow-hidden transition-all;
+  }
+  .faq__tab__content__answer.open{
+      @apply max-h-[50rem] transition-all;
+  }
+  .faq__nav li{
+      @apply p-[1rem] max-w-[15rem];
+  }
+  .faq__nav li.active{
+    @apply bg-primary rounded-xl; 
+  }
 }
