@@ -162,9 +162,11 @@
 
 
 @layer components{
+ 
   .faq .container{
       @apply max-w-[70rem];
   }
+  
   .faq__wrapper{
       @apply lg:grid  lg:grid-cols-[1.5fr,2.5fr] items-start;
   }
@@ -196,4 +198,90 @@
   .faq__nav li.active{
     @apply bg-primary rounded-xl; 
   }
+  .faq__nav li{
+    @apply p-[1rem] max-w-[13rem];
+}
+
+.faq__tab__content{
+    @apply hidden;
+}
+.faq__tab__content.active{
+    @apply block;
+}
+
+.faq__text{
+  @apply mb-[3rem]; 
+}
+.faq__text span {
+  @apply text-[2rem] text-primary lg:text-[5rem]
+}
+.faq__text h2{
+  @apply text-[2rem] font-bold text-center text-dark lg:text-[5rem]
+}
+.faq__text p{
+  @apply text-[1.2rem] text-center lg:text-[1.5rem] lg:max-w-[700px] lg:flex lg:mx-auto
+}
+.faq__question h4{
+  @apply text-[1.27rem] text-dark
+}
+.faq__question h4 span{
+  @apply font-bold
+}
+.faq__tab__content__answer{
+  @apply text-[1.27rem]  text-dark text-justify
+}
+.faq__tab__content__answer h5{
+  @apply my-[2rem]
+}
+.faq__tab__content__answer i{
+  @apply text-primary mr-[1rem]
+}
+.faq__tab__content__answer ul li a{
+  @apply underline
+}
+.faq__tab__content__answer ul li span{
+  @apply font-bold  text-start mb-[1rem]
+}
+.faq__tab__content__answer ul li p{
+  @apply font-bold my-[1rem]
+}
+.faq__tab__content__answer h4{
+  @apply my-[1rem]
+}
+.faq__tab__content__answer h5 span{
+  @apply font-semibold
+}
+}
+
+@layer components{
+.example__text{
+  @apply mb-[3rem]; 
+}
+.example__text span {
+  @apply text-[2rem] text-primary lg:text-[5rem]
+}
+.example__text h2{
+  @apply text-[2rem] font-bold text-center text-dark lg:text-[5rem]
+}
+.example__text p{
+  @apply text-[1.2rem] text-center lg:text-[1.5rem] lg:max-w-[700px] lg:flex lg:mx-auto
+}
+.example__play{
+@apply rounded-[2rem] bg-grey h-[30rem] mb-[2rem] lg:w-[37rem] lg:h-[37rem] lg:mb-[4rem]
+}
+.example__play video{
+  @apply rounded-t-[2rem] lg:w-[40rem] 
+}
+.example__cards{
+@apply m-[2rem]
+}
+.example__cards h3{
+  @apply text-[1.5rem] text-dark font-bold
+}
+.example__cards p{
+  @apply text-justify w-[23rem] text-[1.2rem]
+}
+.all{
+  @apply lg:grid grid-cols-2 lg:gap-x-[4rem] lg:max-w-[70%] lg:mx-auto
+}
 }
