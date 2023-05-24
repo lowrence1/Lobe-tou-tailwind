@@ -267,7 +267,7 @@
   @apply text-[1.2rem] text-center lg:text-[1.5rem] lg:max-w-[700px] lg:flex lg:mx-auto
 }
 .example__play{
-@apply rounded-[2rem] bg-grey h-[30rem] mb-[2rem] lg:w-[37rem] lg:h-[37rem] lg:mb-[4rem]
+@apply rounded-[2rem] bg-grey h-[30rem] mb-[2rem] lg:w-[37rem] lg:h-[37rem] lg:mb-[4rem] shadow-2xl
 }
 .example__play video{
   @apply rounded-t-[2rem] lg:w-[40rem] 
@@ -285,3 +285,42 @@
   @apply lg:grid grid-cols-2 lg:gap-x-[4rem] lg:max-w-[70%] lg:mx-auto
 }
 }
+
+@layer components{
+  .blog__text{
+    @apply mb-[3rem]; 
+  }
+  .blog__text span {
+    @apply text-[2rem] text-primary lg:text-[5rem]
+  }
+  .blog__text h2{
+    @apply text-[2rem] font-bold text-center text-dark lg:text-[5rem]
+  }
+  .blog__text p{
+    @apply text-[1.2rem] text-center lg:text-[1.5rem] lg:max-w-[700px] lg:flex lg:mx-auto
+  }
+  .blog__play{
+  @apply hover:scale-[1.05] transition-all  rounded-[2rem] bg-grey h-[30rem] mb-[2rem] lg:w-[37rem] lg:h-[37rem] lg:mb-[4rem] shadow-2xl cursor-pointer
+  }
+  .blog__play img{
+    @apply rounded-t-[2rem] lg:w-[40rem] 
+  }
+  .blog__cards{
+  @apply m-[2rem]
+  }
+  .blog__cards h3{
+    @apply text-[1.2rem] text-dark font-bold mb-[2rem]
+  }
+  .blog__cards p{
+    @apply text-justify w-[23rem] text-[1rem] text-dark mb-[2rem]
+  }
+  .blog__cards span{
+    @apply text-gray-500
+  }
+  .lahat{
+    @apply lg:grid grid-cols-2 lg:gap-x-[4rem] lg:max-w-[70%] lg:mx-auto
+  }
+  .hiwalay{
+    @apply lg:flex lg:justify-center
+  }
+  }
